@@ -1,0 +1,107 @@
+body {
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+#h2-1 span {
+    display: inline;
+}
+
+#h2-1 #logout {
+    display: none;
+}
+
+#h2-1:hover span {
+    display: none;
+}
+
+#h2-1:hover #logout {
+    display: inline;
+}
+h1 {
+	margin-top: 0;
+	text-align: center;
+    font-size: 50px;
+}
+label:hover
+{
+	color: blue;
+	text-decoration: underline;
+}
+input[type="radio"]
+{
+	margin: 5px;
+}
+#gallery{
+	border: 3px double blue;
+	border-radius: 2%;
+	height: 320px;     
+	left: 0;
+	margin: 0 auto;
+	padding-top: 20px; 
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 120px;          
+	width: 340px;       
+}
+#pick {
+	border: 0px solid green;
+	left: 0;
+	margin: 30px auto;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 450px;
+	width: 50px;	
+}
+#buyButton {
+	background-color: transparent;
+	border: 3px double greenyellow;
+	z-index: 2;
+    position: absolute;
+    top: 250px;  
+    left: 575px;
+}
+
+#cancelButton {
+	background-color: transparent;
+	border: 3px double greenyellow;
+	z-index: 2;
+    position: absolute;
+    top: 250px;  
+    left: 625px;
+}
+
+button:hover
+{
+	border-color: red;
+	color: pink;
+}
+ul {
+    background-color: transparent;
+	float: right;
+	position: relative; 
+    text-align: center;
+    top: 150px;  
+    left: 490px;
+    list-style-type: none;
+}
+img
+{
+	height: 150px;  
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	width: 150px; 
+}
+#selection
+{
+	border: 0px solid blueviolet;
+	height: 50px;
+	left: 125px;
+	margin: 0;
+	position: absolute;
+	top: 150px;
+	width: 15%;		
+}

@@ -1,0 +1,53 @@
+body {
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+h1, h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+form {
+    width: 340px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 1.2em;
+    display: block;
+}
+
+label:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+input[type="text"], input[type="password"] {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+input[type="submit"], button {
+    background-color: transparent;
+    border: 3px double greenyellow;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+    border-color: red;
+    color: pink;
+}
+
+p {
+    color: red;
+}
+.error {
+    text-align: center;
+    color: blue;
+  }

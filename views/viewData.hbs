@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+<body>
+    <form method="post" action="/main"> 
+        <h1>Beautiful Places Gallery</h1>
+        <div id="h2-1">
+            <span>Welcome, {{username}}!</span>
+            <a href="/logout" id="logout"> Logout</a>
+        </div>
+        <div id="selection">
+            <select id="images" name="images">
+                <option value="" selected>-- Select an Image --</option>
+                {{#each imageList}}
+                    <option value="{{this.FILENAME}}">{{removeExt this.FILENAME}}</option> 
+                {{/each}}
+            </select>
+            <button id="button" type="submit">Submit</button>
+        </div> 
+    </form>
+    <div id="gallery"> 
+        <img id="image" src="{{data1.imagePath}}" height="300" width="300"> 
+        <div id="pick">
+           {{data1.filename}} 
+        </div>
+    </div>   
+    <script>
+    const image = document.getElementById('image');
+    image.addEventListener('dblclick', () => {
+        const currentSrc = image.src; 
+        const filename = currentSrc.split('/').pop(); 
+        if (filename !== '' && filename !== 'Waterfall.webp') { 
+            window.location.href = '/order?filename=' + filename; 
+        }
+    });
+    </script>   
+</body>
+</html>

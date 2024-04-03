@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head styleSuffix='order'}}
+<body>
+    
+        <h1>Beautiful Places Gallery</h1>
+        <div id="selection">
+            <ul>
+                    <li>{{image.filenameWithoutExtension}}</li>
+                    <li>{{image.DESCRIPTION}}</li>
+                    <li>${{image.PRICE}}</li>
+            </ul>
+            <form method="POST" action="/order/buy">
+                <input type="hidden" name="filename" value="{{image.FILENAME}}" /> 
+                <button type="submit" id="buyButton" onclick="buyOrder()">Buy</button>
+                <button type="button" id="cancelButton" onclick="cancelOrder()">Cancel</button>
+            </form>
+        </div>
+    <div id="gallery">
+       <img id="image" 
+     src="{{#if image}}./images/{{image.FILENAME}}{{else}}./images/Canada.jpg{{/if}}" 
+     onerror="this.onerror=null;this.src='./images/axxxx.png';" 
+     height="150" width="150"  
+     ondblclick="handleDoubleClick('{{#if image}}{{image.FILENAME}}{{else}}''{{/if}}')">
+    </div>
+    <script>
+        function cancelOrder() {
+            alert("Maybe next time.");
+            window.location.href = "/main";
+        }
+        function buyOrder() {
+            alert("Sold!");
+            window.location.href = "/main";
+        }
+    </script>
+</body>
+</html>
